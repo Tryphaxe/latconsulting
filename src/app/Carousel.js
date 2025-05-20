@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 export default function Carousell() {
 	return (
-		<div className="py-12">
+		<div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
 			<div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
 				<Carousel>
 					<div className="flex flex-col items-center justify-center gap-y-4">
 						<h2 className='font-black text-center'>Facebook</h2>
-						<span className="text-xl font-semibold text-black">&quot;Mon expérience a été incroyable, j&apos;ai découvert des cultures fascinantes et fait des amis pour la vie!&quot;</span>
+						<span className="text-xl font-semibold text-black text-center">&quot;Mon expérience a été incroyable, j&apos;ai découvert des cultures fascinantes et fait des amis pour la vie!&quot;</span>
 						<Image
 							src="/img/hdt.jpg"
 							alt="Image 1"

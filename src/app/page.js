@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <div className="bg-gray-100 py-12 px-12">
-        <dl className="grid grid-cols-3 gap-x-8 gap-y-10">
+        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10">
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-black/5 p-2 ring-1 ring-black/10">
                 <EnvelopeIcon aria-hidden="true" className="size-6 text-black" />

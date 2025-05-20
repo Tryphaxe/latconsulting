@@ -3,10 +3,10 @@ import React from 'react';
 
 export default function Hero() {
 	return (
-		<div className="relative isolate px-6 pt-5 lg:px-8 bg-white overflow-hidden h-[83vh] mx-12 mb-12 rounded-md">
+		<div className="relative isolate px-0 sm:px-6 pt-5 lg:px-8 bg-white overflow-hidden h-[83vh] mx-0 sm:mx-12 mb-12 rounded-none sm:rounded-md">
 			<div
 				aria-hidden="true"
-				className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden sm:-top-80 blur-md"
+				className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden sm:-top-80 sm:blur-md blur-none sm:block hidden"
 			>
 				<Image
 					src="/img/hdt.jpg"
@@ -16,7 +16,8 @@ export default function Hero() {
 					alt="Picture of the background"
 				/>
 			</div>
-			<div className="mx-auto max-w-2xl py-32 sm:py-12 lg:py-12">
+			<div className="bg-[url('/img/hdt.jpg')] absolute -z-10 bg-cover bg-center h-full w-full sm:hidden block"/>
+			<div className="mx-auto max-w-2xl py-32 sm:py-12 lg:py-12 bg-[#0000006b] sm:bg-transparent">
 				<div className="hidden sm:mb-8 sm:flex sm:justify-center">
 					<div className="relative bg-white rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
 						Des opportunités uniques à l&apos;international.{' '}
@@ -27,10 +28,10 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="text-center">
-					<h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
+					<h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-gray-900 sm:text-7xl">
 						Explorez le monde, atteignez vos ambitions.
 					</h1>
-					<p className="mt-8 text-lg font-medium text-pretty md:text-white text-gray-500 sm:text-xl/8">
+					<p className="mt-8 text-lg font-medium text-pretty md:text-white text-gray-200 sm:text-xl/8">
 						Voyage, études, accompagnement sur mesure.
 					</p>
 					<div className="mt-10 flex items-center justify-center gap-x-6">
@@ -40,7 +41,7 @@ export default function Hero() {
 						>
 							Inscription
 						</a>
-						<a href="#" className="text-sm/6 font-semibold text-gray-900">
+						<a href="#" className="text-sm/6 font-semibold sm:text-gray-900 text-white">
 							En savoir plus<span aria-hidden="true">→</span>
 						</a>
 					</div>

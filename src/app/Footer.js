@@ -19,32 +19,31 @@ export function Footerr() {
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
             <FooterBrand
-              href="https://flowbite.com"
+              href="/"
               src="./img/laticon.png"
-              alt="Flowbite Logo"
-              name="Flowbite"
+              alt="Lat Consulting Logo"
             />
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+          <div className="grid grid-cols-3 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
-              <FooterTitle title="about" />
+              <FooterTitle title="A propos" />
               <FooterLinkGroup col>
                 <FooterLink href="#">Flowbite</FooterLink>
                 <FooterLink href="#">Tailwind CSS</FooterLink>
               </FooterLinkGroup>
             </div>
             <div>
-              <FooterTitle title="Follow us" />
+              <FooterTitle title="Suivez-nous" />
               <FooterLinkGroup col>
                 <FooterLink href="#">Github</FooterLink>
                 <FooterLink href="#">Discord</FooterLink>
               </FooterLinkGroup>
             </div>
             <div>
-              <FooterTitle title="Legal" />
+              <FooterTitle title="Mentions légales" />
               <FooterLinkGroup col>
-                <FooterLink href="#">Privacy Policy</FooterLink>
-                <FooterLink href="#">Terms &amp; Conditions</FooterLink>
+                <FooterLink href="#">Politique de confidentialité</FooterLink>
+                <FooterLink href="#">Conditions d'utilisation</FooterLink>
               </FooterLinkGroup>
             </div>
           </div>
