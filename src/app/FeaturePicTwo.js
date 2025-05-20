@@ -1,5 +1,6 @@
 import React from 'react';
 import { CubeIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 
 export default function FeaturePicTwo() {
 
@@ -7,9 +8,11 @@ export default function FeaturePicTwo() {
 		<div className="overflow-hidden bg-white py-24 sm:py-12">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-					<img
-						alt="Product screenshot"
+					<Image
+						alt=""
 						src="/img/standi.jpg"
+						width={800}
+						height={800}
 						className="w-[32rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[38rem]"
 					/>
 					<div className="lg:pt-4 lg:pr-8">
@@ -19,7 +22,7 @@ export default function FeaturePicTwo() {
 								Découvrez les avantages de notre service
 							</p>
 							<p className="mt-6 text-lg/8 text-gray-600">
-								Choisir notre entreprise, c'est opter pour un soutien inégalé 24/7 et une expérience sur mesure. 
+								Choisir notre entreprise, c'est opter pour un soutien inégalé 24/7 et une expérience sur mesure.
 								Profitez d'un large éventail de destinations adaptées à vos envies.
 							</p>
 							<div className="mt-10 flex items-center gap-x-6">

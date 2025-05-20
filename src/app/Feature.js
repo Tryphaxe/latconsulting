@@ -54,7 +54,7 @@ export default function Feature() {
                   {feature.description}
                 </p>
                 <a href="#" className="font-semibold text-orange-600">
-                  <span aria-hidden="true" className="absolute inset-0" /> {feature.textb} <span aria-hidden="true">&rarr;</span>
+                  <span aria-hidden="true" className="inset-0" /> {feature.textb} <span aria-hidden="true">&rarr;</span>
                 </a>
               </Card>
             ))}

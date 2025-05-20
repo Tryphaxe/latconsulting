@@ -1,5 +1,6 @@
 import React from 'react';
 import { CubeIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 
 export default function FeaturePic() {
 
@@ -52,7 +53,7 @@ export default function FeaturePic() {
 							</div>
 						</div>
 					</div>
-					<img
+					<Image
 						alt="Product screenshot"
 						src="/img/impexp.jpg"
 						width={2432}

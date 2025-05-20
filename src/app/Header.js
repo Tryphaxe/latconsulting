@@ -4,26 +4,14 @@ import { useState } from 'react'
 import {
 	Dialog,
 	DialogPanel,
-	Disclosure,
-	DisclosureButton,
-	DisclosurePanel,
 	PopoverGroup,
 } from '@headlessui/react'
 import {
-	ArrowPathIcon,
 	Bars3Icon,
-	ChartPieIcon,
-	CursorArrowRaysIcon,
-	FingerPrintIcon,
-	SquaresPlusIcon,
 	XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-
-const callsToAction = [
-	{ name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-	{ name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+import { PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -34,11 +22,13 @@ export default function Header() {
 				<div className="flex lg:flex-1">
 					<a href="#" className="-m-1.5 p-1.5">
 						<span className="sr-only">Lat Consulting</span>
-						<img
-							alt=""
-							src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-							className="h-8 w-auto"
-						/>
+						<Image
+								alt=""
+								src="/img/laticon.png"
+								width={60}
+								height={60}
+								className="h-8 w-auto"
+							/>
 					</a>
 				</div>
 				<div className="flex lg:hidden">
@@ -74,9 +64,11 @@ export default function Header() {
 					<div className="flex items-center justify-between">
 						<a href="#" className="-m-1.5 p-1.5">
 							<span className="sr-only">Lat Consulting</span>
-							<img
+							<Image
 								alt=""
-								src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+								src="/img/laticon.png"
+								width={60}
+								height={60}
 								className="h-8 w-auto"
 							/>
 						</a>

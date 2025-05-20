@@ -8,8 +8,10 @@ export default function Hero() {
 				aria-hidden="true"
 				className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden sm:-top-80 blur-md"
 			>
-				<img
+				<Image
 					src="/img/hdt.jpg"
+					width={1000}
+					height={1000}
 					className="h-full w-full object-cover object-center"
 					alt="Picture of the background"
 				/>
