@@ -43,7 +43,7 @@ export function Footerr() {
               <FooterTitle title="Mentions légales" />
               <FooterLinkGroup col>
                 <FooterLink href="#">Politique de confidentialité</FooterLink>
-                <FooterLink href="#">Conditions d'utilisation</FooterLink>
+                <FooterLink href="#">Conditions d&apos;utilisation</FooterLink>
               </FooterLinkGroup>
             </div>
           </div>
