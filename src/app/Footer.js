@@ -20,7 +20,7 @@ export function Footerr() {
           <div>
             <FooterBrand
               href="https://flowbite.com"
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="./img/laticon.png"
               alt="Flowbite Logo"
               name="Flowbite"
             />

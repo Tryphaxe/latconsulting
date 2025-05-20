@@ -19,7 +19,7 @@ export default function Home() {
       <div className="bg-[url('/img/hdt.jpg')] bg-cover bg-center h-72">
         <div className="bg-black opacity-80 px-12 flex flex-col justify-center gap-y-3 py-12 h-full">
           <span className='text-5xl font-black text-white'>Explorez le monde avec nous</span>
-          <span className="text-gray-300">Contactez-nous dès aujourd'hui pour commencer votre aventure à l&apos;étranger et réaliser vos rêves.</span>
+          <span className="text-gray-300">Contactez-nous dès aujourd&apos;hui pour commencer votre aventure à l&apos;étranger et réaliser vos rêves.</span>
           <div className="flex items-center gap-x-6">
 						<a
 							href="#"
@@ -69,7 +69,7 @@ export default function Home() {
                 Visitez-nous à notre adresse pour plus d&apos;informations.
               </dd>
               <dd className="mt-2 text-base/7 text-orange-600">
-                01 BP 1234 Abidjan 01, Côte d'Ivoire
+                01 BP 1234 Abidjan 01, Côte d&apos;Ivoire
               </dd>
             </div>
           </dl>
