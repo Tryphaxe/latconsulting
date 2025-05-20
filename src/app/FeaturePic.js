@@ -24,11 +24,11 @@ export default function FeaturePic() {
 						<div className="lg:max-w-lg">
 							<h2 className="text-base/7 font-semibold text-gray-700">Explorez</h2>
 							<p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-								Découvrez nos destinations d'études et de voyages
+								Découvrez nos destinations d&apos;études et de voyages
 							</p>
 							<p className="mt-6 text-lg/8 text-gray-600">
 								Nos destinations populaires offrent des expériences inoubliables.
-								Que vous souhaitiez étudier à l'étranger ou voyager, nous avons ce qu'il vous faut.
+								Que vous souhaitiez étudier à l&apos;étranger ou voyager, nous avons ce qu&apos;il vous faut.
 							</p>
 							<dl className="mt-10 max-w-xl space-y-3 text-base/7 text-gray-600 lg:max-w-none">
 								{features.map((feature) => (

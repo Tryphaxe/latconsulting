@@ -22,8 +22,8 @@ export default function FeaturePicTwo() {
 								Découvrez les avantages de notre service
 							</p>
 							<p className="mt-6 text-lg/8 text-gray-600">
-								Choisir notre entreprise, c'est opter pour un soutien inégalé 24/7 et une expérience sur mesure.
-								Profitez d'un large éventail de destinations adaptées à vos envies.
+								Choisir notre entreprise, c&apos;est opter pour un soutien inégalé 24/7 et une expérience sur mesure.
+								Profitez d&apos;un large éventail de destinations adaptées à vos envies.
 							</p>
 							<div className="mt-10 flex items-center gap-x-6">
 								<a

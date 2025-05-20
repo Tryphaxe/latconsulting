@@ -9,7 +9,7 @@ export default function Carousell() {
 				<Carousel>
 					<div className="flex flex-col items-center justify-center gap-y-4">
 						<h2 className='font-black text-center'>Facebook</h2>
-						<span className="text-xl font-semibold text-black">"Mon expérience a été incroyable, j'ai découvert des cultures fascinantes et fait des amis pour la vie!"</span>
+						<span className="text-xl font-semibold text-black">&quot;Mon expérience a été incroyable, j&apos;ai découvert des cultures fascinantes et fait des amis pour la vie!&quot;</span>
 						<Image
 							src="/img/hdt.jpg"
 							alt="Image 1"

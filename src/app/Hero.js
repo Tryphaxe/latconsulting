@@ -19,7 +19,7 @@ export default function Hero() {
 			<div className="mx-auto max-w-2xl py-32 sm:py-12 lg:py-12">
 				<div className="hidden sm:mb-8 sm:flex sm:justify-center">
 					<div className="relative bg-white rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-						Des opportunités uniques à l'international.{' '}
+						Des opportunités uniques à l&apos;international.{' '}
 						<a href="#" className="font-semibold text-orange-600">
 							<span aria-hidden="true" className="absolute inset-0" />
 							Voir plus <span aria-hidden="true">&rarr;</span>

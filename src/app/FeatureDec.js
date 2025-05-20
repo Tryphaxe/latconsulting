@@ -27,7 +27,7 @@ export default function FeatureDec() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto">
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-            Découvrez comment rejoindre nos programmes d'études et de voyage à l'étranger.
+            Découvrez comment rejoindre nos programmes d&apos;études et de voyage à l&apos;étranger.
           </p>
         </div>
         <div className="mx-auto mt-16 sm:mt-20 lg:mt-24">

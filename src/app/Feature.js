@@ -31,7 +31,7 @@ export default function Feature() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl lg:text-center">
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-            Découvrez nos services pour étudier et voyager à l'étranger.
+            Découvrez nos services pour étudier et voyager à l&apos;étranger.
           </p>
           {/* <p className="mt-6 text-lg/8 text-gray-600">
             Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
