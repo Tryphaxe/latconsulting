@@ -20,7 +20,7 @@ export function Footerr() {
           <div>
             <FooterBrand
               href="/"
-              src="./img/laticon.png"
+              src="/img/laticon.png"    
               alt="Lat Consulting Logo"
             />
           </div>

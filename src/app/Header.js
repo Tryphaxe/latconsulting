@@ -10,7 +10,6 @@ import {
 	Bars3Icon,
 	XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
 export default function Header() {
@@ -23,12 +22,12 @@ export default function Header() {
 					<a href="#" className="-m-1.5 p-1.5">
 						<span className="sr-only">Lat Consulting</span>
 						<Image
-								alt=""
-								src="/img/laticon.png"
-								width={60}
-								height={60}
-								className="h-8 w-auto"
-							/>
+							alt=""
+							src="/img/laticon.png"
+							width={60}
+							height={60}
+							className="h-8 w-auto"
+						/>
 					</a>
 				</div>
 				<div className="flex lg:hidden">
@@ -42,19 +41,19 @@ export default function Header() {
 					</button>
 				</div>
 				<PopoverGroup className="hidden lg:flex lg:gap-x-12">
-					<a href="#" className="text-sm/6 font-semibold text-gray-900">
+					<a href="/" className="text-sm/6 font-semibold text-gray-900">
 						Accueil
 					</a>
-					<a href="#" className="text-sm/6 font-semibold text-gray-900">
+					<a href="/pages/services" className="text-sm/6 font-semibold text-gray-900">
 						Services
 					</a>
-					<a href="#" className="text-sm/6 font-semibold text-gray-900">
+					<a href="/pages/about" className="text-sm/6 font-semibold text-gray-900">
 						A propos
 					</a>
 				</PopoverGroup>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
 					<a href="#" className="text-sm/6 font-semibold text-gray-900">
-						Log in <span aria-hidden="true">&rarr;</span>
+						Connexion <span aria-hidden="true">&rarr;</span>
 					</a>
 				</div>
 			</nav>
@@ -85,19 +84,19 @@ export default function Header() {
 						<div className="-my-6 divide-y divide-gray-500/10">
 							<div className="space-y-2 py-6">
 								<a
-									href="#"
+									href="/"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
 								>
 									Accueil
 								</a>
 								<a
-									href="#"
+									href="/pages/services"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
 								>
 									Services
 								</a>
 								<a
-									href="#"
+									href="/pages/about"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
 								>
 									A propos
