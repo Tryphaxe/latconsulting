@@ -1,5 +1,5 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 import { Card } from "flowbite-react";
+import Link from 'next/link';
 
 const features = [
   {
