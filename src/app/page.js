@@ -5,6 +5,7 @@ import FeatureDec from "./FeatureDec";
 import FeaturePic from "./FeaturePic";
 import FeaturePicTwo from "./FeaturePicTwo";
 import Hero from "./Hero";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -21,15 +22,15 @@ export default function Home() {
           <span className='text-5xl font-black text-white'>Explorez le monde avec nous</span>
           <span className="text-gray-300">Contactez-nous dès aujourd&apos;hui pour commencer votre aventure à l&apos;étranger et réaliser vos rêves.</span>
           <div className="flex items-center gap-x-6">
-						<a
+						<Link
 							href="#"
 							className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 						>
 							Inscription
-						</a>
-						<a href="#" className="text-sm/6 font-semibold text-gray-300">
+						</Link>
+						<Link href="#" className="text-sm/6 font-semibold text-gray-300">
 							En savoir plus<span aria-hidden="true">→</span>
-						</a>
+						</Link>
 					</div>
         </div>
       </div>

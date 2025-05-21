@@ -1,6 +1,7 @@
 import React from 'react';
 import { CubeIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FeaturePicTwo() {
 
@@ -26,15 +27,15 @@ export default function FeaturePicTwo() {
 								Profitez d&apos;un large éventail de destinations adaptées à vos envies.
 							</p>
 							<div className="mt-10 flex items-center gap-x-6">
-								<a
+								<Link
 									href="#"
 									className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 								>
 									En savoir plus
-								</a>
-								<a href="#" className="text-sm/6 font-semibold text-gray-900">
+								</Link>
+								<Link href="#" className="text-sm/6 font-semibold text-gray-900">
 									Inscription<span aria-hidden="true">→</span>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

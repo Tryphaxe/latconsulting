@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 
 export default function Hero() {
 	return (
@@ -9,10 +10,10 @@ export default function Hero() {
 				<div className="hidden mx-auto max-w-2xl sm:mb-8 sm:flex sm:justify-center">
 					<div className="relative bg-white rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
 						Des opportunités uniques à l&apos;international.{' '}
-						<a href="#" className="font-semibold text-orange-600">
+						<Link href="#" className="font-semibold text-orange-600">
 							<span aria-hidden="true" className="absolute inset-0" />
 							Voir plus <span aria-hidden="true">&rarr;</span>
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div className="text-center mx-auto max-w-2xl">
@@ -23,15 +24,15 @@ export default function Hero() {
 						Voyage, études, accompagnement sur mesure.
 					</p>
 					<div className="mt-10 flex items-center justify-center gap-x-6">
-						<a
+						<Link
 							href="#"
 							className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
 						>
 							Inscription
-						</a>
-						<a href="#" className="text-sm/6 font-semibold text-gray-200">
+						</Link>
+						<Link href="#" className="text-sm/6 font-semibold text-gray-200">
 							En savoir plus<span aria-hidden="true">→</span>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

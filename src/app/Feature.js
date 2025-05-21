@@ -53,9 +53,9 @@ export default function Feature() {
                 <p className="font-normal text-gray-700">
                   {feature.description}
                 </p>
-                <a href="#" className="font-semibold text-orange-600">
+                <Link href="#" className="font-semibold text-orange-600">
                   <span aria-hidden="true" className="inset-0" /> {feature.textb} <span aria-hidden="true">&rarr;</span>
-                </a>
+                </Link>
               </Card>
             ))}
           </dl>

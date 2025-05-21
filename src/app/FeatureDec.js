@@ -42,9 +42,9 @@ export default function FeatureDec() {
                 </dt>
                 <dd className="mt-2 text-base/7 text-gray-600">{feature.description}</dd>
                 <dd className="mt-2 text-base/7 text-gray-600">
-                  <a href="#" className="font-semibold text-orange-600">
+                  <Link href="#" className="font-semibold text-orange-600">
                     <span aria-hidden="true" className="absolute inset-0" />{feature.lien}<span aria-hidden="true">&rarr;</span>
-                  </a>
+                  </Link>
                 </dd>
               </div>
             ))}
