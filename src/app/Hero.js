@@ -1,8 +1,9 @@
-import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
 
+
 export default function Hero() {
+
 	return (
 		<div className="relative isolate bg-white overflow-hidden sm:h-[83vh] h-[100vh] mx-0 sm:mx-12 mb-12 rounded-none sm:rounded-md">
 			<div className="bg-[url('/img/trav.jpg')] absolute -z-10 bg-cover bg-center h-full w-full"/>

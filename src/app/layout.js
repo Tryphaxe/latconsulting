@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body
-        className={`${afacad.className} antialiased`}
+        className={`${afacad.className} antialiased pt-2`}
       >
         <Header />
         {children}
