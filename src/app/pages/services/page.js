@@ -98,7 +98,7 @@ export default function page() {
               <div className="lg:max-w-lg">
                 <h2 className="text-base/7 font-semibold text-orange-600">Informations</h2>
                 <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                  Etudes à l'étranger
+                  Etudes à l&apos;étranger
                 </p>
                 <p className="mt-6 text-lg/8 text-gray-600">
                   Nous travaillons avec un large réseau d’universités et d’écoles partenaires à travers l’Europe, l’Amérique, l’Asie et l’Afrique.
@@ -134,7 +134,7 @@ export default function page() {
               <div className="lg:max-w-lg">
                 <h2 className="text-base/7 font-semibold text-orange-600">Informations</h2>
                 <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                  Voyages à l'étranger
+                  Voyages à l&apos;étranger
                 </p>
                 <p className="mt-6 text-lg/8 text-gray-600">
                   Que ce soit pour le plaisir, la découverte ou l’apprentissage,

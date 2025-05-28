@@ -28,7 +28,7 @@ export default function Aservices() {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-4xl lg:mx-0">
 						<h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Voyage</h2>
-						<p className="mt-2 text-lg/8 text-gray-600">Découvrez le monde avec notre agence de voyage. Que vous rêviez d'explorer des destinations exotiques, de faire des croisières de luxe ou de partir à l'aventure, nous vous proposons des solutions sur mesure. Bénéficiez de notre expertise pour des voyages mémorables, en toute tranquillité.</p>
+						<p className="mt-2 text-lg/8 text-gray-600">Découvrez le monde avec notre agence de voyage. Que vous rêviez d&apos;explorer des destinations exotiques, de faire des croisières de luxe ou de partir à l&apos;aventure, nous vous proposons des solutions sur mesure. Bénéficiez de notre expertise pour des voyages mémorables, en toute tranquillité.</p>
 					</div>
 					<div className="mx-auto mt-3 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-orange-200 pt-5 sm:mt-5 sm:pt-5 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 						{posts.map((post) => (
