@@ -14,7 +14,7 @@ import {
 
 export function Footerr() {
   return (
-    <Footer container>
+    <Footer container className="bg-orange-50">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
