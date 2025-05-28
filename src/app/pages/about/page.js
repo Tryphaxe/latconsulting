@@ -114,7 +114,7 @@ export default function page() {
                     Nous offrons une gamme variée de terrains soigneusement
                     sélectionnés, que ce soit pour un usage résidentiel,
                     commercial, ou industriel. Nous aidons nos clients à trouver
-                    l'emplacement idéal qui répondra parfaitement à leurs
+                    l&apos;emplacement idéal qui répondra parfaitement à leurs
                     attentes et à leurs objectifs à long terme.
                   </span>
                 </li>
@@ -127,7 +127,7 @@ export default function page() {
                     <strong className="font-semibold text-gray-900">
                       Import-export :
                     </strong>{" "}
-                    Nous facilitons les échanges commerciaux à l'international
+                    Nous facilitons les échanges commerciaux à l&apos;international
                     grâce à des services logistiques efficaces et une
                     compréhension approfondie des marchés mondiaux. Nous aidons
                     nos clients à naviguer dans les complexités des
