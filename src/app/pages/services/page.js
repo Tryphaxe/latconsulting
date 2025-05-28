@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Aservices from './Aservices';
 import { CheckBadgeIcon } from '@heroicons/react/20/solid'
-import Call from './call';
+import Call from './Callta';
 
 const features = [
   {
