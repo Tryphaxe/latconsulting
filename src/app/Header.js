@@ -53,7 +53,7 @@ export default function Header() {
 					</Link>
 				</PopoverGroup>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<Link href="#" className="text-sm/6 font-semibold text-gray-900">
+					<Link href="/admin/dashboard" className="text-sm/6 font-semibold text-gray-900">
 						Connexion <span aria-hidden="true">&rarr;</span>
 					</Link>
 				</div>
