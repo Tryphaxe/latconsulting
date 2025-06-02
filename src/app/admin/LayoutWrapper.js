@@ -86,13 +86,7 @@ export default function LayoutWrapper({ children }) {
 										<MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
 											<span className="absolute -inset-1.5" />
 											<span className="sr-only">Open user menu</span>
-											<Image
-												alt="user"
-												src={user.imageUrl}
-												width={40}
-												height={40}
-												className="size-8 rounded-full"
-											/>
+											<div style={{ backgroundImage: `url(${user.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="size-8 rounded-full center cover" />
 										</MenuButton>
 									</div>
 									<MenuItems
@@ -147,13 +141,8 @@ export default function LayoutWrapper({ children }) {
 					<div className="border-t border-gray-700 pt-4 pb-3">
 						<div className="flex items-center px-5">
 							<div className="shrink-0">
-								<Image
-									alt="user"
-									src={user.imageUrl}
-									width={40}
-									height={40}
-									className="size-8 rounded-full"
-								/>
+								<div style={{ backgroundImage: `url(${user.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} 
+								className="size-8 rounded-full" />
 							</div>
 							<div className="ml-3">
 								<div className="text-base/5 font-medium text-white">{user.name}</div>

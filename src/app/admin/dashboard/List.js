@@ -61,13 +61,7 @@ export default function List() {
 			{people.map((person) => (
 				<li key={person.email} className="flex justify-between gap-x-6 py-5">
 					<div className="flex min-w-0 gap-x-4">
-						<Image
-							alt="user"
-							src={person.imageUrl}
-							width={40}
-							height={40}
-							className="size-12 flex-none rounded-full bg-gray-50"
-						/>
+						<div style={{ backgroundImage: `url(${person.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="size-12 flex-none rounded-full bg-gray-50" />
 						<div className="min-w-0 flex-auto">
 							<p className="text-sm/6 font-semibold text-gray-900">{person.name}</p>
 							<p className="mt-1 truncate text-xs/5 text-gray-500">{person.email}</p>

@@ -89,13 +89,13 @@ export default function Page() {
                     Image
                   </label>
                   {imagePreview && (
-						<Image
-							alt="user"
-							src={imagePreview}
-							width={200}
-							height={200}
-							className="mb-2 max-h-48 rounded border border-gray-200 object-contain"
-						/>
+                    <Image
+                      alt="user"
+                      src={imagePreview}
+                      width={200}
+                      height={200}
+                      className="mb-2 max-h-48 rounded border border-gray-200 object-contain"
+                    />
                   )}
                   <FileInput id="image" sizing="sm" onChange={handleImageChange} />
                 </div>
