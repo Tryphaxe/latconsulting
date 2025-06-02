@@ -1,7 +1,7 @@
 import { Avatar } from 'flowbite-react'
 import React from 'react'
 
-export default function page() {
+export default function Page() {
 	return (
 		<div>
 			{/* Banner */}

@@ -10,7 +10,7 @@ import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/re
 import Link from 'next/link';
 import { Loader } from 'lucide-react'
 
-export default function page() {
+export default function Page() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [open, setOpen] = useState(false)
 	const [username, setUsername] = useState('')

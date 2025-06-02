@@ -7,8 +7,9 @@ import { Card } from "flowbite-react";
 import Link from 'next/link';
 import { Sheet } from 'lucide-react';
 import { FileInput, Label } from "flowbite-react"
+import Image from 'next/image';
 
-export default function page() {
+export default function Page() {
   const [open, setOpen] = useState(false)
 
   const [imagePreview, setImagePreview] = useState(null);
@@ -88,11 +89,13 @@ export default function page() {
                     Image
                   </label>
                   {imagePreview && (
-                    <img
-                      src={imagePreview}
-                      alt="Aperçu"
-                      className="mb-2 max-h-48 rounded border border-gray-200 object-contain"
-                    />
+						<Image
+							alt="user"
+							src={imagePreview}
+							width={200}
+							height={200}
+							className="mb-2 max-h-48 rounded border border-gray-200 object-contain"
+						/>
                   )}
                   <FileInput id="image" sizing="sm" onChange={handleImageChange} />
                 </div>
