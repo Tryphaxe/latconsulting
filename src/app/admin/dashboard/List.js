@@ -1,89 +1,68 @@
-import Image from "next/image"
+'use client'
 
-const people = [
-	{
-		name: 'Leslie Alexander',
-		email: 'leslie.alexander@example.com',
-		role: 'Co-Founder / CEO',
-		imageUrl:
-			'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-		lastSeen: '3h ago',
-		lastSeenDateTime: '2023-01-23T13:23Z',
-	},
-	{
-		name: 'Michael Foster',
-		email: 'michael.foster@example.com',
-		role: 'Co-Founder / CTO',
-		imageUrl:
-			'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-		lastSeen: '3h ago',
-		lastSeenDateTime: '2023-01-23T13:23Z',
-	},
-	{
-		name: 'Dries Vincent',
-		email: 'dries.vincent@example.com',
-		role: 'Business Relations',
-		imageUrl:
-			'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-		lastSeen: null,
-	},
-	{
-		name: 'Lindsay Walton',
-		email: 'lindsay.walton@example.com',
-		role: 'Front-end Developer',
-		imageUrl:
-			'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-		lastSeen: '3h ago',
-		lastSeenDateTime: '2023-01-23T13:23Z',
-	},
-	{
-		name: 'Courtney Henry',
-		email: 'courtney.henry@example.com',
-		role: 'Designer',
-		imageUrl:
-			'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-		lastSeen: '3h ago',
-		lastSeenDateTime: '2023-01-23T13:23Z',
-	},
-	{
-		name: 'Tom Cook',
-		email: 'tom.cook@example.com',
-		role: 'Director of Product',
-		imageUrl:
-			'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-		lastSeen: null,
-	},
-]
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import React from 'react'
+import toast from 'react-hot-toast'
+import { Loader, Phone, Timer } from 'lucide-react'
+import { Avatar, Badge } from 'flowbite-react'
+import { formatRelativeDate } from '@/utils/dateFormat';
 
 export default function List() {
+	const [messages, setMessages] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const fetchMessages = async () => {
+		setLoading(true);
+		try {
+			const response = await axios.get('/api/sms');
+			setMessages(response.data || []);
+			toast.success("Récupération des messages réussie");
+		} catch (error) {
+			toast.error("Erreur API Récupération des messages");
+			setMessages([]);
+		} finally {
+			setLoading(false);
+		}
+	};
+	useEffect(() => {
+		fetchMessages();
+	}, []);
 	return (
 		<ul role="list" className="divide-y divide-gray-100">
-			{people.map((person) => (
-				<li key={person.email} className="flex justify-between gap-x-6 py-5">
-					<div className="flex min-w-0 gap-x-4">
-						<div style={{ backgroundImage: `url(${person.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="size-12 flex-none rounded-full bg-gray-50" />
-						<div className="min-w-0 flex-auto">
-							<p className="text-sm/6 font-semibold text-gray-900">{person.name}</p>
-							<p className="mt-1 truncate text-xs/5 text-gray-500">{person.email}</p>
-						</div>
-					</div>
-					<div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-						<p className="text-sm/6 text-gray-900">{person.role}</p>
-						{person.lastSeen ? (
-							<p className="mt-1 text-xs/5 text-gray-500">
-								Last seen <time dateTime={person.lastSeenDateTime}>{person.lastSeen}</time>
-							</p>
-						) : (
-							<div className="mt-1 flex items-center gap-x-1.5">
-								<div className="flex-none rounded-full bg-emerald-500/20 p-1">
-									<div className="size-1.5 rounded-full bg-emerald-500" />
-								</div>
-								<p className="text-xs/5 text-gray-500">Online</p>
+			{!loading && messages.length > 0 ? (
+				messages.map(message => (
+					<li key={message.id} className="flex flex-col sm:flex-row justify-between gap-x-6 py-5">
+						<div className="flex min-w-0 gap-x-4">
+							<Avatar rounded />
+							<div className="min-w-0 flex-auto">
+								<p className="text-lg font-semibold text-gray-900 uppercase">{message.nome}{' '}{message.prenom}</p>
+								<p className="mt-1 text-md text-orange-500">{message.email}</p>
+								<p className="mt-1 text-md text-gray-800">{message.content}</p>
 							</div>
-						)}
-					</div>
+						</div>
+						<div className="shrink-0 flex flex-col items-end">
+							<Badge color="gray" icon={Phone} size='sm'>
+								{message.phone}
+							</Badge>
+							<p className="mt-1 text-sm text-gray-500">
+								<span>{formatRelativeDate(message.createdAt)}</span>
+							</p>
+						</div>
+					</li>
+
+				))
+			) : !loading ? (
+				<li className='flex justify-center items-center my-4'>
+					<span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
+						Aucun messages reçus
+					</span>
 				</li>
-			))}
+			) : null}
+			{loading && (
+				<div className="flex justify-center items-center my-4">
+					<Loader color="#fc2700" size={24} className={loading ? "animate-spin" : ""} />
+				</div>
+			)}
 		</ul>
 	)
 }

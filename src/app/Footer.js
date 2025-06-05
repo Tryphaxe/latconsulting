@@ -1,65 +1,54 @@
-
 "use client";
-
-import {
-  Footer,
-  FooterBrand,
-  FooterCopyright,
-  FooterDivider,
-  FooterIcon,
-  FooterLink,
-  FooterLinkGroup,
-  FooterTitle,
-} from "flowbite-react";
+import Link from "next/link";
+import Image from "next/image"
 
 export function Footerr() {
   return (
-    <Footer container className="bg-orange-50">
-      <div className="w-full">
-        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div>
-            <FooterBrand
-              href="/"
-              src="/img/laticon.png"    
-              alt="Lat Consulting Logo"
+    <footer className="mt-20 xl:mt-32 mx-auto w-full relative text-center bg-orange-600 text-white">
+      <div className="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
+        <div className="flex justify-center mb-8">
+          <Link href="/" className="">
+            <span className="sr-only">Lat Consulting</span>
+            <Image
+              alt=""
+              src="/img/laticon.png"
+              width={100}
+              height={100}
+              className="h-16 w-auto"
             />
-          </div>
-          <div className="grid grid-cols-3 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-            <div>
-              <FooterTitle title="A propos" />
-              <FooterLinkGroup col>
-                <FooterLink href="#">Flowbite</FooterLink>
-                <FooterLink href="#">Tailwind CSS</FooterLink>
-              </FooterLinkGroup>
-            </div>
-            <div>
-              <FooterTitle title="Suivez-nous" />
-              <FooterLinkGroup col>
-                <FooterLink href="#">Github</FooterLink>
-                <FooterLink href="#">Discord</FooterLink>
-              </FooterLinkGroup>
-            </div>
-            <div>
-              <FooterTitle title="Mentions légales" />
-              <FooterLinkGroup col>
-                <FooterLink href="#">Politique de confidentialité</FooterLink>
-                <FooterLink href="#">Conditions d&apos;utilisation</FooterLink>
-              </FooterLinkGroup>
-            </div>
-          </div>
+          </Link>
         </div>
-        <FooterDivider />
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <FooterCopyright href="#" by="Defta™" year={2022} />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            {/* <FooterIcon href="#" icon={BsFacebook} />
-            <FooterIcon href="#" icon={BsInstagram} />
-            <FooterIcon href="#" icon={BsTwitter} />
-            <FooterIcon href="#" icon={BsGithub} />
-            <FooterIcon href="#" icon={BsDribbble} /> */}
-          </div>
+        <h2 className="font-bold text-3xl xl:text-4xl leading-snug">
+          Transformez vos projets de voyage en réussite !
+        </h2>
+        <Link
+          href="#catalogue"
+          className="mt-8 xl:mt-12 px-12 py-5 text-lg font-medium leading-tight inline-block bg-orange-800 rounded-full shadow-xl border border-transparent hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-orange-999 focus:ring-orange-500"
+        >
+          Commencer
+        </Link>
+        <div className="mt-14 xl:mt-20">
+          <nav className="flex flex-wrap justify-center text-lg font-medium">
+            <div className="px-5 py-2">
+              <Link href="/">Accueil</Link>
+            </div>
+            <div className="px-5 py-2">
+              <Link href="/pages/services">Services</Link>
+            </div>
+            <div className="px-5 py-2">
+              <Link href="/pages/about">A propos</Link>
+            </div>
+            {/* <div className="px-5 py-2">
+              <Link href="#">Terms</Link>
+            </div>
+            <div className="px-5 py-2">
+              <Link href="#">Twitter</Link>
+            </div> */}
+          </nav>
+          <p className="mt-7 text-base">© 2022 Defta, LC</p>
+          <Link href="#" className="mt-2 text-base">-----&----</Link>
         </div>
       </div>
-    </Footer>
+    </footer>
   );
 }

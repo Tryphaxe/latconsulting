@@ -8,21 +8,18 @@ const features = [
     url: '/img/im1.jpg',
     title: "Transformez votre rêve d'études ou de voyages en réalité.",
     description: "Nous offrons des programmes d'études à l'étranger adaptés à vos besoins.",
-    textb: "En savoir plus",
   },
   {
     id: 2,
     url: '/img/im2.jpg',
     title: "Voyagez à l'étranger avec nos offres personnalisées et enrichissantes.",
     description: 'Explorez le monde grâce à nos voyages organisés et sur mesure.',
-    textb: "Découvrir",
   },
   {
     id: 3,
     url: '/img/im3.jpg',
     title: "Recevez des conseils personnalisés pour votre projet d'études ou de voyage.",
     description: 'Notre équipe vous accompagne à chaque étape de votre aventure.',
-    textb: "Contactez-nous",
   },
 ]
 
@@ -55,8 +52,8 @@ export default function Feature() {
                   <p className="font-normal text-gray-700">
                     {feature.description}
                   </p>
-                  <Link href="#" className="font-semibold text-orange-600">
-                    <span aria-hidden="true" className="inset-0" /> {feature.textb} <span aria-hidden="true">&rarr;</span>
+                  <Link href="#catalogue" className="font-semibold text-orange-600">
+                    <span aria-hidden="true" className="inset-0" /> Découvrir <span aria-hidden="true">&rarr;</span>
                   </Link>
                 </Card>
               ))}

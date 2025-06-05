@@ -35,6 +35,7 @@ export default function Page() {
 			toast.error('Erreur lors de l’enregistrement.')
 		} finally {
 			setIsLoading(false);
+			fetchUsers(); // Recharger la liste des utilisateurs après l'ajout
 		}
 	}
 

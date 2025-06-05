@@ -1,11 +1,40 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/16/solid'
-import { Field, Label, Switch } from '@headlessui/react'
+// import { ChevronDownIcon } from '@heroicons/react/16/solid'
+// import { Field, Label, Switch } from '@headlessui/react'
+import { Spinner } from 'flowbite-react'
+import axios from 'axios'
+import toast from 'react-hot-toast'
 
 export default function Call() {
-	const [agreed, setAgreed] = useState(false)
+	// const [agreed, setAgreed] = useState(false)
+	const [nome, setNome] = useState('')
+	const [prenom, setPrenom] = useState('')
+	const [email, setEmail] = useState('')
+	const [phone, setPhone] = useState('')
+	const [content, setContent] = useState('')
+	const [isLoading, setIsLoading] = useState(false);
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		setIsLoading(true);
+		try {
+			const res = await axios.post('/api/sms', { nome, prenom, email, phone, content })
+			toast.success('Message envoyé avec succès !')
+			console.log(res.data)
+		} catch (err) {
+			console.error(err)
+			toast.error('Erreur lors de l\'envoi du message')
+		} finally {
+			setNome('')
+			setPrenom('')
+			setEmail('')
+			setPhone('')
+			setContent('')
+			setIsLoading(false);
+		}
+	}
 
 	return (
 		<div className="bg-gray-50 px-6 py-24 sm:py-32 lg:px-8">
@@ -13,7 +42,7 @@ export default function Call() {
 				<h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contactez-nous</h2>
 				<p className="mt-2 text-lg/8 text-gray-600">Prenez rendez-vous dès maintenant ou demandez un devis personnalisé gratuitement.</p>
 			</div>
-			<form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+			<form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
 				<div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 					<div>
 						<label htmlFor="nom" className="block text-sm/6 font-semibold text-gray-900">
@@ -22,9 +51,10 @@ export default function Call() {
 						<div className="mt-2.5">
 							<input
 								id="nom"
-								name="nom"
+								value={nome}
+								onChange={(e) => setNome(e.target.value)}
 								type="text"
-								autoComplete="given-name"
+								required
 								className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600"
 							/>
 						</div>
@@ -36,9 +66,10 @@ export default function Call() {
 						<div className="mt-2.5">
 							<input
 								id="prenoms"
-								name="prenoms"
+								value={prenom}
+								onChange={(e) => setPrenom(e.target.value)}
 								type="text"
-								autoComplete="prenoms"
+								required
 								className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600"
 							/>
 						</div>
@@ -50,8 +81,10 @@ export default function Call() {
 						<div className="mt-2.5">
 							<input
 								id="email"
-								name="email"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 								type="email"
+								required
 								autoComplete="email"
 								className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600"
 							/>
@@ -63,7 +96,7 @@ export default function Call() {
 						</label>
 						<div className="mt-2.5">
 							<div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-orange-600">
-								<div className="grid shrink-0 grid-cols-1 focus-within:relative">
+								{/* <div className="grid shrink-0 grid-cols-1 focus-within:relative">
 									<select
 										id="pays"
 										name="pays"
@@ -79,13 +112,15 @@ export default function Call() {
 										aria-hidden="true"
 										className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
 									/>
-								</div>
+								</div> */}
 								<input
 									id="telephone"
-									name="telephone"
+									value={phone}
+									onChange={(e) => setPhone(e.target.value)}
 									type="text"
 									placeholder="00 00 000 000"
-									className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+									required
+									className="block min-w-0 grow py-1.5 px-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
 								/>
 							</div>
 						</div>
@@ -97,14 +132,15 @@ export default function Call() {
 						<div className="mt-2.5">
 							<textarea
 								id="message"
-								name="message"
+								value={content}
+								onChange={(e) => setContent(e.target.value)}
 								rows={4}
+								required
 								className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600"
-								defaultValue={''}
 							/>
 						</div>
 					</div>
-					<Field className="flex gap-x-4 sm:col-span-2">
+					{/* <Field className="flex gap-x-4 sm:col-span-2">
 						<div className="flex h-6 items-center">
 							<Switch
 								checked={agreed}
@@ -125,13 +161,14 @@ export default function Call() {
 							</a>
 							.
 						</Label>
-					</Field>
+					</Field> */}
 				</div>
 				<div className="mt-10">
 					<button
 						type="submit"
 						className="block w-full rounded-md bg-orange-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
 					>
+						{isLoading && <Spinner size="sm" color="warning" className="mr-2" />}
 						Envoyer
 					</button>
 				</div>

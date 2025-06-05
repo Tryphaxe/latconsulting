@@ -6,12 +6,15 @@ import FeaturePic from "./FeaturePic";
 import FeaturePicTwo from "./FeaturePicTwo";
 import Hero from "./Hero";
 import Link from 'next/link';
+import All from "./all";
+import Call from "./pages/services/Callta";
 
 export default function Home() {
   return (
     <div className="">
       <Hero />
       <Feature/>
+      <All/>
       <FeatureDec/>
       <FeaturePic />
       <FeaturePicTwo />
@@ -34,6 +37,8 @@ export default function Home() {
 					</div>
         </div>
       </div>
+
+      <Call/>
 
       <div className="bg-gray-100 py-12 px-12">
         <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10">
