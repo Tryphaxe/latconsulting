@@ -6,7 +6,7 @@ import List from './List'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-export default function page() {
+export default function Page() {
 	const [smsCount, setSmsCount] = useState(0);
 	const [userCount, setUserCount] = useState(0);
 	const [postCount, setPostCount] = useState(0);
