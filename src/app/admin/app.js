@@ -16,7 +16,6 @@ const navigation = [
 	{ name: 'Posts', href: '/admin/posts', icon: FileText },
 	{ name: 'Utilisateurs', href: '/admin/users', icon: Users },
 	{ name: 'Messages', href: '/admin/messages', icon: MessageCircle },
-	{ name: 'Paramètres', href: '/admin/settings', icon: Settings },
 ];
 
 function classNames(...classes) {
