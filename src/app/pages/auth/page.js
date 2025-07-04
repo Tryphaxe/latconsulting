@@ -41,7 +41,7 @@ export default function Page() {
 		<div className="bg-white w-full min-h-screen flex items-center justify-center">
 			<div className="max-w-86 min-w-80 mx-auto px-6 py-7 overflow-hidden bg-white">
 				<h2 className="text-2xl uppercase font-medium mb-1">Welcome back</h2>
-				<p className="text-gray-600 mb-6 text-sm">Entrez vos informations s'il vous plaît !</p>
+				<p className="text-gray-600 mb-6 text-sm">Entrez vos informations s&apos;il vous plaît !</p>
 
 				<form autoComplete="off" onSubmit={handleLogin}>
 					<p className="text-red-500">{/* message d'erreur ici si besoin */}</p>
