@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <LayoutWrapper>{children}</LayoutWrapper>
         <div className="sm:hidden flex fixed right-0 bottom-0 z-50 m-4">
           <Link
-            href=""
+            href="https://wa.me/message/FQLHZGTUGRWSO1/"
             className='shadow-lg animate-bounce text-gray-700 bg-gray-50 hover:bg-green-50 hover:text-gray-900 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150'
           >
             <i className="fa-brands fa-whatsapp" style={{ color: 'rgb(10, 128, 8)' }} />

@@ -51,7 +51,7 @@ export default function Home() {
                 Contactez-nous directement.
               </dd>
               <dd className="mt-2 text-base/7 text-orange-600">
-                latconsulting@gmail.com
+                latconsulting45@gmail.com
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -63,7 +63,7 @@ export default function Home() {
                 Nous sommes disponiblle pour vos appels.
               </dd>
               <dd className="mt-2 text-base/7 text-orange-600">
-                +225 22 27 285 285
+                +225 01 01 933 188
               </dd>
             </div>
             <div className="flex flex-col items-start">

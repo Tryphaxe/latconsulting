@@ -5,19 +5,19 @@ const features = [
 	{
 		name: 'Localisation',
 		description:
-			'Bureau de la poste, Cocody; 1er Etage, dernier bureau à gauche',
+			'Bureau de la poste, Cocody',
 		icon: MapIcon,
 	},
 	{
 		name: 'Email',
 		description:
-			'latconsulting57@gmail.com',
+			'latconsulting45@gmail.com',
 		icon: EnvelopeIcon,
 	},
 	{
 		name: 'Contacts',
 		description:
-			'+225 01 001 809 73 | +225 07 160 538 67',
+			'+225 01 01 933 188',
 		icon: PhoneArrowDownLeftIcon,
 	},
 ]

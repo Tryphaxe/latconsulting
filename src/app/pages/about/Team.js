@@ -39,7 +39,7 @@ export default function Teams() {
 						{people.map((person) => (
 							<li key={person.name}>
 								<div className="flex items-center gap-x-6">
-									<Image width={64} height={64} alt="" src={person.imageUrl} className="size-16 rounded-full" />
+									<div style={{ backgroundImage: `${person.imageUrl}`, backgroundSize: 'cover', backgroundPosition: 'center' }} className="size-16 rounded-full center cover" />
 									<div>
 										<h3 className="text-base/7 font-semibold tracking-tight text-gray-900">{person.name}</h3>
 										<p className="text-sm/6 font-semibold text-indigo-600">{person.role}</p>
