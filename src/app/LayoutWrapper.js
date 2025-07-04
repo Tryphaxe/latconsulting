@@ -8,12 +8,13 @@ import Link from 'next/link';
 export default function LayoutWrapper({ children }) {
 	const pathname = usePathname();
 	const isAdminPage = pathname.startsWith('/admin');
+	const isAuthPage = pathname === '/pages/auth';
 
 	return (
 		<>
-			{!isAdminPage && <Header />}
+			{!isAdminPage && !isAuthPage && <Header />}
 			{children}
-			{!isAdminPage && <Footerr />}
+			{!isAdminPage && !isAuthPage && <Footerr />}
 		</>
 	);
 }

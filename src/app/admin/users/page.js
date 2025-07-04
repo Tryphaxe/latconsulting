@@ -5,9 +5,7 @@ import axios from 'axios'
 import { Avatar, Spinner } from 'flowbite-react'
 import React from 'react'
 import toast from 'react-hot-toast'
-import { FileInput, Label } from "flowbite-react"
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import Link from 'next/link';
 import { Loader } from 'lucide-react'
 
 export default function Page() {
@@ -15,7 +13,6 @@ export default function Page() {
 	const [open, setOpen] = useState(false)
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
-	const [email, setEmail] = useState('')
 	const [users, setUsers] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -23,11 +20,10 @@ export default function Page() {
 		e.preventDefault()
 		setIsLoading(true);
 		try {
-			const res = await axios.post('/api/users', { username, email, password })
+			const res = await axios.post('/api/auth/signup', { username, password })
 			toast.success('Utilisateur enregistré avec succès !')
 			setOpen(false)
 			setUsername('')
-			setEmail('')
 			setPassword('')
 			console.log(res.data)
 		} catch (err) {
@@ -80,15 +76,14 @@ export default function Page() {
 					users.map(user => (
 						<li key={user.id} className="flex justify-between gap-x-6 py-5">
 							<div className="flex min-w-0 gap-x-4">
-								<Avatar placeholderInitials="Username" rounded />
+								<Avatar placeholderInitials={user.username} rounded />
 								<div className="min-w-0 flex-auto">
-									<p className="text-sm/6 font-semibold text-gray-900">{user.name} - {user.email}</p>
-									<p className="mt-1 truncate text-xs/5 text-gray-500">{user.password}</p>
+									<p className="text-sm/6 font-semibold text-gray-900">{user.username}</p>
 								</div>
 							</div>
 							<div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
 								<p className="mt-1 text-xs/5 text-gray-500">
-									{user.createdAt}
+									{new Date(user.createdAt).toLocaleDateString()}
 								</p>
 							</div>
 						</li>
@@ -108,7 +103,7 @@ export default function Page() {
 				)}
 			</ul>
 
-			{/* Modal pour ajouter un post */}
+			{/* Modal pour ajouter un user */}
 			<Dialog open={open} onClose={setOpen} className="relative z-10">
 				<DialogBackdrop
 					transition
@@ -138,18 +133,6 @@ export default function Page() {
 									/>
 								</div>
 								<div>
-									<label className="block text-md font-medium text-gray-700 mb-1" htmlFor="email">
-										Email
-									</label>
-									<input
-										type="text"
-										id="email"
-										value={email}
-										onChange={(e) => setEmail(e.target.value)}
-										className="block p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-md"
-									/>
-								</div>
-								<div>
 									<label className="block text-md font-medium text-gray-700 mb-1" htmlFor="password">
 										Mot de passe
 									</label>
@@ -174,7 +157,6 @@ export default function Page() {
 										data-autofocus
 										onClick={() => {
 											setOpen(false);
-											setImagePreview(null);
 										}}
 										className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto"
 									>

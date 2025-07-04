@@ -5,28 +5,47 @@ import React from 'react'
 import List from './List'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
 	const [smsCount, setSmsCount] = useState(0);
 	const [userCount, setUserCount] = useState(0);
 	const [postCount, setPostCount] = useState(0);
+
+	const router = useRouter()
 	const fetchCount = async () => {
+		try {
+			const response = await axios.get('/api/sms/count');
+			const responses = await axios.get('/api/users/count');
+			const responsess = await axios.get('/api/posts/count');
+			setSmsCount(response.data || 0);
+			setUserCount(responses.data || 0);
+			setPostCount(responsess.data || 0);
+		} catch (error) {
+			setSmsCount(0);
+			setUserCount(0);
+			setPostCount(0);
+		}
+	};
+	useEffect(() => {
+		fetchCount();
+
+		const verifyAuth = async () => {
 			try {
-				const response = await axios.get('/api/sms/count');
-				const responses = await axios.get('/api/users/count');
-				const responsess = await axios.get('/api/posts/count');
-				setSmsCount(response.data || 0);
-				setUserCount(responses.data || 0);
-				setPostCount(responsess.data || 0);
-			} catch (error) {
-				setSmsCount(0);
-				setUserCount(0);
-				setPostCount(0);
+				const res = await fetch('/api/user')
+				if (!res.ok) {
+					router.push('/pages/auth')
+					return
+				}
+				fetchCount()
+			} catch (err) {
+				router.push('/pages/auth')
 			}
-		};
-		useEffect(() => {
-			fetchCount();
-		}, []);
+		}
+
+		verifyAuth()
+	}, []);
+
 	return (
 		<div>
 			<div className="mb-3 grid grid-cols-1 sm:grid-cols-3 space-x-5 space-y-3 sm:space-y-0">

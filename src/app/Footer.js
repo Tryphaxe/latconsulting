@@ -46,7 +46,7 @@ export function Footerr() {
             </div> */}
           </nav>
           <p className="mt-7 text-base">© 2022 Defta, LC</p>
-          <Link href="/admin/dashboard" className="mt-2 text-base">-----&----</Link>
+          <Link href="/pages/auth" className="mt-2 text-base">---&---</Link>
         </div>
       </div>
     </footer>
